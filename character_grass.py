@@ -1,5 +1,6 @@
 from pico2d import *
 import math
+
 open_canvas()
 
 grass = load_image('grass.png')
@@ -15,17 +16,38 @@ def run_ciecle():
         x = r * math.cos(theta) + cx
         y = r * math.sin(theta) + cy
     
-    clear_canvas_now()
-    boy.draw_now(x.y)
-    delay(0.1)
+        clear_canvas_now()
+        boy.draw_now(x,y)
+        delay(0.1)
+
+    pass
+def run_top():
+    print('TOP')
+    pass
+
+def run_right():
+    print('right')
+    pass
+
+def run_bottom():
+    print('bottom')
+    pass
+
+def run_left():
+    print('oo')
+    pass
 
 def run_rectangle():
     print('RECTANGLE')
+    run_top()
+    run_right()
+    run_bottom()
+    run_left() 
     pass    
 
 while True:
     run_ciecle() 
     run_rectangle()
     break
-
+    
 close_canvas()
